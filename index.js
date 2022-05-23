@@ -45,6 +45,7 @@ function isPalindrome(word) {
 /*
   Add written explanation of your solution here
 */
+// The idea is that we want to loop through the entire array in a reverse manner, and add each character to a new string, and simply compare it at the end
 
 // You can run `node index.js` to view these console logs
 if (require.main === module) {
@@ -56,6 +57,12 @@ if (require.main === module) {
 
   console.log("Expecting: false");
   console.log("=>", isPalindrome("robot"));
+
+  console.log("Expecting: true");
+  console.log("=>", isPalindrome("kayak"));
+
+  console.log("Expecting: false");
+  console.log("=>", isPalindrome("sam"));
 }
 
 module.exports = isPalindrome;
