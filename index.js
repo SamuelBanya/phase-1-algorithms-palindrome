@@ -1,3 +1,15 @@
+function reverseString(word) {
+  let reverseWord = "";
+
+  for (let i = word.length - 1; i >= 0; i--) {
+    console.log(`${word}[${i}]: ${word[i]}`);
+    reverseWord += word[i];
+    console.log("reverseWord: ", reverseWord);
+  }
+
+  return reverseWord;
+}
+
 function isPalindrome(word) {
   // Write your algorithm here
   // Write a function isPalindrome that will receive one argument, a string.
@@ -18,15 +30,7 @@ function isPalindrome(word) {
   // return true
   // }
 
-  let reverseWord = "";
-
-  console.log("typeof(word): ", typeof(word));
-
-  for (let i = word.length - 1; i >= 0; i--) {
-    console.log(`${word}[${i}]: ${word[i]}`);
-    reverseWord += word[i];
-    console.log("reverseWord: ", reverseWord);
-  }
+  let reverseWord = reverseString(word);
 
   if (word === reverseWord) {
     console.log(`Palindrome check: Yes, ${word} === ${reverseWord}`);
